@@ -1,0 +1,372 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.gradient-header {
+    background: linear-gradient(to right, #ff4800, #aa1400);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.gradient-header h1  {
+    text-align: left;
+}
+.gradient-header p{
+    text-align: left;
+    margin-left: 60px;
+}
+
+
+nav {
+    background-color: #040405;
+    height: 50px;
+    line-height: 50px;
+}
+
+.horizontal-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Remove the margin */
+    height: 50px;
+    display: flex;
+    background-color: #000000;
+    justify-content: center;
+    border-top: 2px solid white; /* Add top border to create the partition line */
+}
+
+.horizontal-menu li {
+    margin: 0 10px;
+    background-color: #08090b;
+    border-right: 2px solid white; /* Add right border to create the partition line between navigation items */
+    padding: 0 10px; /* Add some padding to create space between the partition lines and the text */
+}
+
+.horizontal-menu li:last-child {
+    border-right: none; /* Remove the right border from the last navigation item */
+}
+
+.horizontal-menu a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.horizontal-menu a:hover {
+    background-color: #00aaff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.container section h2{
+    color: #aa1400;
+}
+
+main {
+    flex: 1;
+    padding-right: 20px;
+}
+
+main h2 {
+    font-size: 24px;
+}
+
+main p {
+    font-size: 16px;
+}
+
+/* img {
+    float: right;
+    margin: 0 0 20px 20px;
+    max-width: 300px;
+} */
+
+aside {
+    flex-basis: 300px;
+}
+
+.sidebar {
+    margin-top: 30px;
+    /* background-color: #f4f4f4; */
+    padding: 10px;
+}
+
+.sidebar h3 {
+    font-size: 18px;
+}
+
+.gradient-footer {
+    background: linear-gradient(to right, #ff4800, #aa1400);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+.gradient-footer p{
+    text-align: left;
+    margin-left: 50px;
+}
+
+.footer-entity {
+    font-size: 20px;
+}
+
+.image-container {
+    float: left;
+    margin-right: 20px;
+    height: 28vh;
+    width: 34%; /* Add this to set the container width */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Add this to make the image cover the container */
+}
+.text-container {
+    overflow: hidden; /* To clear the float */
+}
+
+.sidebar img{
+    width: 30%;
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: none; /* Hide the hamburger menu by default */
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 156px;
+    right: 20px;
+    z-index: 2;
+}
+
+.hamburger-menu span {
+   
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px auto;
+}
+
+
+.hamburger-menu i {
+    color: #fff;
+    font-size: 24px;
+}
+
+/* Media query for screens from 480 pixels to 767 pixels */
+@media only screen and (max-width: 767px) {
+    .hamburger-menu {
+        display: block; /* Show the hamburger menu */
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .hamburger-menu span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px auto;
+    }
+
+    /* Style the navigation items in the hamburger menu */
+    .horizontal-menu.open {
+        display: block; /* Show the navigation menu when the hamburger menu is open */
+        text-align: center;
+    }
+
+    .horizontal-menu.open li {
+        display: block;
+        margin: 5px 0;
+        border-bottom: 1px solid #fff; /* Add a border between navigation items */
+    }
+
+    /* Adjust sidebar position */
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        transition: transform 0.3s ease; /* Add a transition for smooth animation */
+    }
+
+    /* Move the sidebar down when the hamburger menu is open */
+    .container.open {
+        transform: translateY(150px);
+    }
+
+    .gradient-footer {
+        background: linear-gradient(to right, #00aaff, #0055aa);
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .gradient-footer p {
+        text-align: center; /* Center the text in the footer */
+        margin-left: 0; /* Remove the left margin */
+    }
+}
+
+/* Media query for screens from 480 pixels and below */
+@media only screen and (max-width: 480px) {
+   .horizontal-menu {
+        display: none; /* Hide the regular navigation menu */
+        position: absolute;
+        top: 156px;
+        left: 0;
+        width: 100%;
+        background-color: #0055aa;
+        z-index: 1;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .hamburger-menu {
+        display: block; /* Show the hamburger menu */
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .horizontal-menu.open {
+        display: block; /* Show the navigation menu when the hamburger menu is open */
+        transform: translateY(0);
+        top: 210px;
+    }
+    .horizontal-menu.open li {
+        display: block;
+        margin: 5px 0;
+        
+        border-bottom: 1px solid #fff; /* Add a border between navigation items */
+    }
+     /* Adjust sidebar position */
+     .container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        transition: transform 0.3s ease; /* Add a transition for smooth animation */
+    }
+
+    /* Move the sidebar down when the hamburger menu is open */
+    .container.open {
+        transform: translateY(150px);
+    }
+
+    .gradient-footer {
+        background: linear-gradient(to right, #00aaff, #0055aa);
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+
+    }
+
+    .gradient-footer p {
+        text-align: center; /* Center the text in the footer */
+        margin-left: 0; /* Remove the left margin */
+    }
+
+}
+
+/* Media query for screens from 768 pixels and above */
+@media only screen and (min-width: 768px) {
+    .horizontal-menu {
+        display: flex; /* Show the regular navigation menu */
+        position: static;
+        /* background-color: #0055aa; */
+        
+    }
+
+    .hamburger-menu {
+        display: none; /* Hide the hamburger menu */
+    }
+
+    .horizontal-menu li {
+        margin: 0 10px;
+      
+        border-right: 2px solid white; /* Add right border to create the partition line between navigation items */
+        padding: 0 10px; /* Add some padding to create space between the partition lines and the text */
+    }
+
+    .horizontal-menu li:last-child {
+        border-right: none; /* Remove the right border from the last navigation item */
+    }
+}
+
+
+/* CSS styles as provided in the previous messages */
+
+/* Updated media query for screens from 768 pixels to 1023 pixels (tablet-sized screens) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Hide the regular navigation menu */
+    .horizontal-menu {
+        display: none;
+    }
+
+    /* Hamburger menu styles (show the hamburger menu on tablet-sized screens) */
+    .hamburger-menu {
+        display: block; /* Show the hamburger menu */
+        text-align: center;
+        top: 170px; /* Adjust the top position to center the hamburger menu vertically */
+    }
+
+    /* Adjust sidebar position */
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        transition: transform 0.3s ease; /* Add a transition for smooth animation */
+    }
+
+    /* Move the sidebar down when the hamburger menu is open */
+    .container.open {
+        transform: translateY(100px); /* Adjust the vertical position of the sidebar */
+    }
+
+    /* Show the navigation items in the hamburger menu when it is open */
+    .horizontal-menu.open {
+        display: block;
+        position: absolute;
+        top: 217px; /* Adjust the top position to properly show the menu items below the navigation bar */
+       
+        width: 820px;
+        background-color: #0055aa;
+        z-index: 1;
+        border-radius: 5px; /* Add some border radius for a more modern look */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow for depth */
+    }
+
+    /* Style the list items in the hamburger menu */
+    .horizontal-menu.open li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Center the menu items text and remove right border from the last item */
+    .horizontal-menu.open li a {
+        text-align: center;
+        border-right: none;
+    }
+
+
+    /* ... (other styles for tablet-sized screens) ... */
+}
+
+/* ... (previous media queries and styles for small and extra-small screens) ... */

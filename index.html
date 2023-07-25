@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header class="gradient-header">
+        <h1 style="font-family: cursive;">Italy</h1>
+        <p>A Land of art and History</p>
+        
+    </header>
+    <nav>
+        <div class="hamburger-menu">
+         
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="horizontal-menu">
+            
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Get Brochure</a></li>
+            <li><a href="#">Special Offers</a></li>
+            <li><a href="#">Join Email List</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main>
+            <section>
+                <h2>Italy:A land of art and history</h2>
+                <div class="image-container" >
+                    <img  src="https://www.state.gov/wp-content/uploads/2018/11/Italy-2109x1406.jpg" alt="Floated Image">
+                </div>
+                <div class="text-container" >
+                  
+                    <p>Italy, country of south-central Europe, occupying a peninsula that juts deep into the Mediterranean Sea. Italy comprises some of the most varied and scenic landscapes on Earth and is often described as a country shaped like a boot. At its broad top stand the Alps, which are among the world’s most rugged mountains. Italy’s highest points are along Monte Rosa, which peaks in Switzerland, and along Mont Blanc, which peaks in France.The western Alps overlook a landscape of Alpine lakes and glacier-carved valleys that stretch down to the Po River and the Piedmont. Tuscany, to the south of the cisalpine region, is perhaps the country’s best-known region.From the central Alps, running down the length of the country, radiates the tall Apennine Range,which widens near Rome to cover nearly the entire width of the Italian peninsula.</p>
+                  
+                </div>
+                <p>Italy’s political geography has been conditioned by this rugged landscape. With few direct roads between them, and with passage from one point to another traditionally difficult, Italy’s towns and cities have a history of self-sufficiency, independence, and mutual mistrust. Visitors today remark on how unlike one town is from the next, on the marked differences in cuisine and dialect, and on the many subtle divergences that make Italy seem less a single nation than a collection of culturally related points in an uncommonly pleasing setting.</p>
+                <p>
+                    Across a span of more than 3,000 years, Italian history has been marked by episodes of temporary unification and long separation, of intercommunal strife and failed empires. At peace for more than half a century now, Italy’s inhabitants enjoy a high standard of living and a highly developed culture.
+                </p>
+          
+            </section>
+        </main>
+
+        <aside>
+            <div class="sidebar">
+                <h3 style="color: grey;">To learn more</h3>
+                <ul>
+                    <li><a href="contentone.html">Rome</a></li>
+                    <li><a href="contenttwo.html">Antoninus</a></li>
+                    <li><a href="#">Venica</a></li>
+                    <li><a href="#">Assisi</a></li>
+                    <li><a href="#">Siena</a></li>
+                    <li><a href="#">Pisa</a></li>
+                    <li><a href="#">Naples</a></li>
+                    <li><a href="#">Milan</a></li>
+                    <li><a href="#">Pompei</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="gradient-footer">
+        <p>&copy; Copyright 2022 Anne Boehm.</p>
+        <!-- <p>Character entity in footer: &copy;&trade;</p> -->
+    </footer>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+     const hamburgerMenu = document.querySelector(".hamburger-menu");
+     const horizontalMenu = document.querySelector(".horizontal-menu");
+     const container = document.querySelector(".container");
+ 
+     // Add event listener for clicking on the hamburger menu
+     hamburgerMenu.addEventListener("click", function() {
+         horizontalMenu.classList.toggle("open");
+         container.classList.toggle("open");
+     });
+ 
+     // Add event listener to close the hamburger menu when clicking outside it
+     document.addEventListener("click", function(event) {
+         if (!hamburgerMenu.contains(event.target) && !horizontalMenu.contains(event.target)) {
+             horizontalMenu.classList.remove("open");
+             container.classList.remove("open");
+         }
+     });
+ });
+ </script>
+</html>

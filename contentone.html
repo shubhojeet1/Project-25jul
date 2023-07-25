@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contentone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-r05u5M2ABD2rUj8aX/IRtNh21eUfr6P0u0r3eKc2R3gkUMhJ9FY7enmk2BDRQ4yfW6c6az20xgKPCp7d0VtJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <header class="gradient-header">
+        <h1 style="font-family: cursive;">Italy</h1>
+        <p>A Land of art and History</p>
+        
+    </header>
+    <nav>
+        <div class="hamburger-menu">
+         
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="horizontal-menu">
+            
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Get Brochure</a></li>
+            <li><a href="#">Special Offers</a></li>
+            <li><a href="#">Join Email List</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <aside>
+            <div class="sidebar">
+                <h3 style="color: grey; margin-left: 35px;">Don't miss these sites:</h3>
+                <ul style="list-style-type: none;">
+                    <li>
+                        <img src="https://www.solosophie.com/wp-content/uploads/2023/01/rome-itinerary_1671774736.jpeg" alt="">
+                        <a href="#">The Colosseum</a>
+                    </li>
+                    <li>
+                        <img src="https://www.solosophie.com/wp-content/uploads/2023/01/rome-itinerary_1671774736.jpeg" alt="">
+                        <a href="#" >The Forum</a>
+                    </li>
+                    <li>
+                        <img src="https://www.solosophie.com/wp-content/uploads/2023/01/rome-itinerary_1671774736.jpeg" alt="">
+                        <a href="#">The Pantheon</a>
+                    </li>
+                    <li>
+                        <img src="https://www.solosophie.com/wp-content/uploads/2023/01/rome-itinerary_1671774736.jpeg" alt="">
+                        <a href="#" >Vatican Museum</a>
+                    </li>
+                    <li>
+                        <img src="https://www.solosophie.com/wp-content/uploads/2023/01/rome-itinerary_1671774736.jpeg" alt="">
+                        <a href="#">Sistine Chapel</a>
+                    </li>
+                    <li>
+                        <img src="https://www.solosophie.com/wp-content/uploads/2023/01/rome-itinerary_1671774736.jpeg" alt="">
+                        <a href="#" >St. Peter's Basilica</a>
+                    </li>
+                    <!-- Add more list items with images and links as needed -->
+                </ul>
+            </div>
+        </aside>
+        <main>
+            <section>
+                <h2>Ancient Rome</h2>
+                <div class="image-container" >
+                    <img  src="https://cdn.britannica.com/45/196945-050-CCF8BD72/Temple-of-Saturn-Arch-Septimius-Severus-Forum.jpg?w=400&h=300&c=crop" alt="Floated Image">
+                    <p style="text-decoration: underline;font-weight: 600;">A Exterior view of the Roman Forum</p>
+                    <p>ancient Rome, the state centred on the city of Rome. This article discusses the period from the founding of the city and the regal period, which began in 753 BC, through the events leading to the founding of the republic in 509 BC, the establishment of the empire in 27 BC, and the final eclipse of the Empire of the West in the 5th century AD.</p>
+                </div>
+                <div class="text-container" >
+                  
+                    <p>
+                        Rome must be considered one of the most successful imperial powers in history. In the course of centuries Rome grew from a small town on the Tiber River in central Italy into a vast empire that ultimately embraced England, all of continental Europe west of the Rhine and south of the Danube, most of Asia west of the Euphrates, northern Africa, and the islands of the Mediterranean. Unlike the Greeks, who excelled in intellectual and artistic endeavours, the Romans achieved greatness in their military, political, and social institutions. Roman society, during the republic, was governed by a strong military ethos. While this helps to explain the incessant warfare, it does not account for Rome’s success as an imperial power. Unlike Greek city-states, which excluded foreigners and subjected peoples from political participation, Rome from its beginning incorporated conquered peoples into its social and political system.Allies and subjects who adopted Roman ways were eventually granted Roman citizenship. During the principate (see below), the seats in the Senate and even the imperial throne were occupied by persons from the Mediterranean realm outside Italy. The lasting effects of Roman rule in Europe can be seen in the geographic distribution of the Romance languages (Italian, French, Spanish, Portuguese, and Romanian), all of which evolved from Latin, the language of the Romans. The Western alphabet of 26 letters and the calendar of 12 months and 365.25 days are only two simple examples of the cultural legacy which Rome has bequeathed Western civilization.Modern historical analysis is making rapid progress in showing how Rome’s early development occurred in a multicultural environment. 
+                    </p>
+                  
+                </div>
+                
+               
+          
+            </section>
+        </main>
+
+       
+    </div>
+
+    <footer class="gradient-footer">
+        <p>&copy; Copyright 2022 Anne Boehm.</p>
+        <!-- <p>Character entity in footer: &copy;&trade;</p> -->
+    </footer>
+</body>
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
+    const horizontalMenu = document.querySelector(".horizontal-menu");
+    const container = document.querySelector(".container");
+
+    // Add event listener for clicking on the hamburger menu
+    hamburgerMenu.addEventListener("click", function() {
+        horizontalMenu.classList.toggle("open");
+        container.classList.toggle("open");
+    });
+
+    // Add event listener to close the hamburger menu when clicking outside it
+    document.addEventListener("click", function(event) {
+        if (!hamburgerMenu.contains(event.target) && !horizontalMenu.contains(event.target)) {
+            horizontalMenu.classList.remove("open");
+            container.classList.remove("open");
+        }
+    });
+});
+</script>
+
+</html>

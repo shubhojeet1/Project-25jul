@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Project - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-r05u5M2ABD2rUj8aX/IRtNh21eUfr6P0u0r3eKc2R3gkUMhJ9FY7enmk2BDRQ4yfW6c6az20xgKPCp7d0VtJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <header class="gradient-header">
+        <h1 style="font-family: cursive;">Italy</h1>
+        <p>A Land of art and History</p>
+        
+    </header>
+    <nav>
+        <div class="hamburger-menu">
+         
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="horizontal-menu">
+            
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Get Brochure</a></li>
+            <li><a href="#">Special Offers</a></li>
+            <li><a href="#">Join Email List</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <aside>
+            <div class="sidebar">
+                <h3 style="color: grey; margin-left: 35px;">Don't miss these sites:</h3>
+                <ul >
+                    <li>
+                       
+                        <a href="#">Audio Tour</a>
+                    </li>
+                    <li>
+                      
+                        <a href="#" >Display map</a>
+                    </li>
+                   
+                  
+                
+                </ul>
+            </div>
+            <div class="sidebar">
+                <h3 style="color: grey; margin-left: 35px;">Don't miss these sites:</h3>
+                <ul >
+                    <li>
+                       
+                        <a href="#">The Colosseum</a>
+                    </li>
+                    <li>
+                      
+                        <a href="#" >The Forum</a>
+                    </li>
+                    <li>
+                       
+                        <a href="#">The Pantheon</a>
+                    </li>
+                    <li>
+                       
+                        <a href="#" >Vatican Museum</a>
+                    </li>
+                    <li>
+                      
+                        <a href="#">Sistine Chapel</a>
+                    </li>
+                    
+                 
+                </ul>
+            </div>
+        </aside>
+        <main>
+            <section>
+                <h2>Temple of Antoninus and Faustina</h2>
+                <h4>the ancient ruins of the Roman Forum, Rome.</h4>
+                <div class="image-container" >
+                    <img  src="https://cdn.britannica.com/43/179043-050-E127930A/Temple-of-Antoninus-ruins-Faustina-Rome-Roman.jpg" alt="Floated Image">
+                    <p style="text-decoration: underline;font-weight: 600;">A street-side view of the Colosseum</p>
+                    <p>The temple was constructed by the Emperor Antoninus Pius, beginning in 141 AD. It was initially dedicated to his deceased and deified wife, Faustina the Elder. Because of this, Faustina was the first Roman empress with a permanent presence in the Forum Romanum.[1] When Antoninus Pius was deified after his death in 161 AD, the temple was re-dedicated to both Antoninus and Faustina by his successor, Marcus Aurelius.</p>
+                </div>
+                <div class="text-container" >
+                  
+                    <p>The building stands on a high platform of large grey peperino tufa blocks. The later of two dedicatory inscriptions says, "Divo Antonino et Divae Faustinae Ex S.C." meaning, “For the divine Antoninus and for the divine Faustina, by decree of the Senate.The eight monolithic Corinthian columns of its pronaos are 17 metres (56 ft) in height. The rich bas-reliefs of the frieze under the cornice, featuring griffins, acanthus scrolls, and candelabra, were often copied from the sixteenth through the nineteenth centuries.Based on numismatic evidence, the temple was originally fenced off from the Via Sacra and a large, seated statue of Faustina would have been inside of the cella. Fragments of this statue and one of Antoninus Pius, which was added later, were discovered in front of the Temple.Based on numismatic evidence, the temple was originally fenced off from the Via Sacra and a large, seated statue of Faustina would have been inside of the cella. Fragments of this statue and one of Antoninus Pius, which was added later, were discovered in front of the Temple.Construction on the temple began around 141 CE by Emperor Antoninus Pius to celebrate the memory of his late wife Faustina. It was later dedicated to the emperor himself following his death. The building was transformed into a church around the 7th-century and became known as the Church of San Lorenzo in Miranda.The origin of the name Miranda is still unclear. It may have come from the name of a benefactress or from the Latin word mirare (to look). This term indicated that from the church, a beautiful view of the forum could be enjoyed.The portico of the original building, with eight large Corinthian columns, can still be seen in front of the entrance. The entire church was placed in what was once was the cella of the temple. The church was restored many times during the Middle Ages and the Renaissance.
+                   </p>
+                  
+                </div>
+                
+               
+          
+            </section>
+        </main>
+
+       
+    </div>
+
+    <footer  class="gradient-footer">
+        <p>&copy; Copyright 2022 Anne Boehm.</p>
+        <!-- <p>Character entity in footer: &copy;&trade;</p> -->
+    </footer>
+</body>
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
+    const horizontalMenu = document.querySelector(".horizontal-menu");
+    const container = document.querySelector(".container");
+
+    // Add event listener for clicking on the hamburger menu
+    hamburgerMenu.addEventListener("click", function() {
+        horizontalMenu.classList.toggle("open");
+        container.classList.toggle("open");
+    });
+
+    // Add event listener to close the hamburger menu when clicking outside it
+    document.addEventListener("click", function(event) {
+        if (!hamburgerMenu.contains(event.target) && !horizontalMenu.contains(event.target)) {
+            horizontalMenu.classList.remove("open");
+            container.classList.remove("open");
+        }
+    });
+});
+</script>
+
+</html>
